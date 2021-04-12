@@ -15,17 +15,26 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("primary/primaryScene.fxml"));
 
+        /* ----------------- Primary stage ----------------- */
+        Parent root = FXMLLoader.load(getClass().getResource("primary/primary.fxml")); // Primary scene FXML loader
         primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("../assets/images/Connect-four-logo.png")));
         primaryStage.setTitle("Connect 4");
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setResizable(false);
         primaryStage.centerOnScreen();
         primaryStage.setScene(new Scene(root, 600, 400));
-        // primaryStage.setScene(new Scene(root, 1440, 800));
-
         primaryStage.show();
+
+        /* ----------------- Primary stage ----------------- */
+        Stage gameStage = new Stage();
+        Parent gameRoot = FXMLLoader.load(getClass().getResource("game/game.fxml")); // Game scene FXML loader
+        gameStage.getIcons().add(new Image(Main.class.getResourceAsStream("../assets/images/Connect-four-logo.png")));
+        gameStage.setTitle("Connect 4");
+        gameStage.initStyle(StageStyle.UNDECORATED);
+        gameStage.setResizable(false);
+        gameStage.centerOnScreen();
+        gameStage.setScene(new Scene(gameRoot, 1440, 800));
     }
 
 }

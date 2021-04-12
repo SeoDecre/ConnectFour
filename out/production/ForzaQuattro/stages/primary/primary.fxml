@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../styles/main.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stages.primary.PrimaryController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../style/main.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stages.primary.PrimaryController">
 
    <!-- Exit button -->
    <Button alignment="CENTER" contentDisplay="CENTER" layoutX="572.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#quit" prefHeight="30.0" prefWidth="30.0" styleClass="exit-button" text="X" textAlignment="CENTER" textFill="#ff3d42" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
@@ -39,7 +39,7 @@
    </TextField>
 
    <!-- Ready button -->
-   <Button id="Btn_Ready" fx:id="Btn_Ready" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="290.0" mnemonicParsing="false" onAction="#startGame" onMouseEntered="#buttonHoverAnimation" onMouseExited="#buttonExitAnimation" prefHeight="30.0" prefWidth="120.0" styleClass="ready-button" text="READY" textAlignment="CENTER" textFill="WHITE">
+   <Button id="Btn_Ready" fx:id="Btn_Ready" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="290.0" mnemonicParsing="false" onAction="#startGame" onMouseClicked="#startGame" onMouseEntered="#buttonHoverAnimation" onMouseExited="#buttonReleasedAnimation" prefHeight="30.0" prefWidth="120.0" styleClass="ready-button" text="READY" textAlignment="CENTER" textFill="WHITE">
       <font>
          <Font size="18.0" />
       </font>

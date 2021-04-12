@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="800.0" prefWidth="1440.0" stylesheets="@../../styles/main.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stages.game.GameController">
+<BorderPane prefHeight="800.0" prefWidth="1440.0" stylesheets="@../../style/main.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stages.game.GameController">
 
    <top>
       <Pane prefHeight="182.0" prefWidth="1440.0" styleClass="top-container" BorderPane.alignment="CENTER">

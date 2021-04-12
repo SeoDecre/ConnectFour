@@ -1,7 +1,4 @@
-@font-face {
-    font-family: Rubik;
-    src: url("../assets/fonts/Rubik-Bold.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
 
 * {
     -fx-font-family: Rubik;
