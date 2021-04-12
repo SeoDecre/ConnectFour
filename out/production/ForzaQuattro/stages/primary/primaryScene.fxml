@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../styles/main.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stages.primary.PrimaryController">
+
+   <!-- Exit button -->
+   <Button alignment="CENTER" contentDisplay="CENTER" layoutX="572.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#quit" prefHeight="30.0" prefWidth="30.0" styleClass="exit-button" text="X" textAlignment="CENTER" textFill="#ff3d42" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Button>
+
+   <!-- Title -->
+   <Text fill="GREY" layoutX="97.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHOOSE YOUR NICKS" textAlignment="CENTER">
+      <font>
+         <Font size="38.0" />
+      </font>
+   </Text>
+
+   <!-- Player 1 input -->
+   <Circle fill="#ff5151" layoutX="132.0" layoutY="172.0" radius="15.0" stroke="#ff5151" strokeType="INSIDE" strokeWidth="0.0" />
+   <TextField fx:id="redTextField" alignment="CENTER" layoutX="172.0" layoutY="155.0" prefHeight="35.0" prefWidth="256.0" promptText="PLAYER 1" styleClass="text-field">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </TextField>
+
+   <!-- Player 2 input -->
+   <Circle fill="#ffe600" layoutX="132.0" layoutY="234.0" radius="15.0" stroke="#ffe600" strokeType="INSIDE" strokeWidth="0.0" />
+   <TextField fx:id="yellowTextField" alignment="CENTER" layoutX="172.0" layoutY="217.0" prefHeight="35.0" prefWidth="256.0" promptText="PLAYER 2" styleClass="text-field">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </TextField>
+
+   <!-- Ready button -->
+   <Button id="Btn_Ready" fx:id="Btn_Ready" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="290.0" mnemonicParsing="false" onAction="#startGame" onMouseEntered="#buttonHoverAnimation" onMouseExited="#buttonExitAnimation" prefHeight="30.0" prefWidth="120.0" styleClass="ready-button" text="READY" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Button>
+   <rotationAxis>
+      <Point3D />
+   </rotationAxis>
+
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1440.0" stylesheets="@../../styles/main.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stages.game.GameController">
+
+   <top>
+      <Pane prefHeight="182.0" prefWidth="1440.0" styleClass="top-container" BorderPane.alignment="CENTER">
+         <Label fx:id="Lbl_GameTime" alignment="CENTER" contentDisplay="CENTER" layoutX="661.0" layoutY="60.0" styleClass="game-time" text="00:00" textFill="WHITE">
+            <font>
+               <Font name="Arial" size="45.0" />
+            </font>
+         </Label>
+          <MenuBar layoutX="10.0" layoutY="1.0" scaleX="1.0" scaleY="1.0" styleClass="menu">
+              <Menu mnemonicParsing="false" text="File">
+                  <MenuItem mnemonicParsing="false" text="Reset" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Load" />
+                  <MenuItem mnemonicParsing="false" text="Quit" />
+              </Menu>
+              <Menu mnemonicParsing="false" text="Edit">
+                  <MenuItem mnemonicParsing="false" text="Settings" />
+              </Menu>
+              <Menu mnemonicParsing="false" text="?">
+                  <MenuItem mnemonicParsing="false" text="About" />
+                  <MenuItem mnemonicParsing="false" text="Help" />
+              </Menu>
+          </MenuBar>
+      </Pane>
+   </top>
+
+   <left>
+      <VBox alignment="CENTER" prefHeight="706.0" prefWidth="350.0" styleClass="v-box" BorderPane.alignment="CENTER">
+         <Label id="Lbl_RedPlayerName" alignment="CENTER" contentDisplay="CENTER" styleClass="player-name" text="Player1" textAlignment="CENTER" textFill="WHITE">
+            <font>
+               <Font size="45.0" />
+            </font>
+         </Label>
+         <Label styleClass="player-score" text="0" textFill="WHITE">
+            <font>
+               <Font size="45.0" />
+            </font>
+         </Label>
+         <Button fx:id="Btn_Quit" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#quit" styleClass="quit-button" text="quit" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+      </VBox>
+   </left>
+
+   <right>
+      <VBox alignment="CENTER" prefHeight="380.0" prefWidth="350.0" styleClass="v-box" BorderPane.alignment="CENTER">
+         <Label id="Lbl_YellowPlayerName" alignment="CENTER" styleClass="player-name" text="Player2" textAlignment="CENTER" textFill="WHITE">
+            <font>
+               <Font size="45.0" />
+            </font>
+         </Label>
+         <Label styleClass="player-score" text="0" textFill="WHITE">
+            <font>
+               <Font size="45.0" />
+            </font>
+         </Label>
+         <Button mnemonicParsing="false" text="quit" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+      </VBox>
+   </right>
+
+   <center>
+      <Pane prefHeight="698.0" prefWidth="740.0" styleClass="game-board-background" BorderPane.alignment="CENTER">
+         <Canvas fx:id="Cnv_Board" height="500.0" layoutX="114.0" layoutY="62.0" nodeOrientation="INHERIT" onMouseClicked="#makeMove" styleClass="grid" width="500.0">
+            <cursor>
+               <Cursor fx:constant="DEFAULT" />
+            </cursor></Canvas>
+      </Pane>
+   </center>
+
+</BorderPane>

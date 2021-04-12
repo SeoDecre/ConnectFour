@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Rubik;
+    src: url("../assets/fonts/Rubik-Bold.ttf");
+}
+
+* {
+    -fx-font-family: Rubik;
+    -fx-background-color: white;
+}
+
+.exit-button {
+    -fx-font-size: 18px;
+    -fx-background-color: white;
+}
+.exit-button:hover {
+    -fx-background-radius: 20;
+    -fx-background-color: #ff3d42;
+    -fx-text-fill: white;
+}
+
+.text-field {
+    -fx-font-size: 16;
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(one-pass-box, #eaeaea, 20, 0.5, 0, 0);
+}
+
+.ready-button {
+    -fx-font-size: 18;
+    -fx-background-color: #7285FF;
+    -fx-background-radius: 12;
+}

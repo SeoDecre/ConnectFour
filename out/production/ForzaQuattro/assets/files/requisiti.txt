@@ -1,0 +1,23 @@
+[MUST]
+[SHOULD]
+[MAY]
+
+- Tech -
+The program will be written using java 16 + javaFX 11
+The program will be available for windows 7+
+Saving method must use a txt file
+
+- Game rules -
+The game is always played with 2 players in a 7x6 grid
+In each turn each player puts a piece of his color inside a column and it will fall until it reaches the lowest available spot
+The one who can put 4 pieces of the same color in a row horizontally, vertically or diagonally wins
+If no one manages to do it then the match ends in a draw
+
+- Game -
+Player1 can set a yellow piece in a column
+Player2 can set a red piece in a column
+If one of the two players wins, they can choose to rematch or to quit
+A player can click on the menu button during his turn
+From the menu a player can save or load the match, quit the application, go to the settings or to the "about" and help windows
+In the settings window a player can change the theme color or go back to the game
+In the help window a player can find instructions about how to play
