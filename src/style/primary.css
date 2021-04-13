@@ -1,0 +1,9 @@
+/* ---------- Primary styling ---------- */
+
+.text-field {
+    -fx-font-size: 16;
+    -fx-text-fill: #212121;
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(one-pass-box, #eaeaea, 20, 0.5, 0, 0);
+}

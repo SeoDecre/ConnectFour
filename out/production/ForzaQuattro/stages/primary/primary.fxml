@@ -39,7 +39,7 @@
    </TextField>
 
    <!-- Ready button -->
-   <Button id="Btn_Ready" fx:id="Btn_Ready" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="290.0" mnemonicParsing="false" onAction="#startGame" onMouseClicked="#startGame" onMouseEntered="#buttonHoverAnimation" onMouseExited="#buttonReleasedAnimation" prefHeight="30.0" prefWidth="120.0" styleClass="ready-button" text="READY" textAlignment="CENTER" textFill="WHITE">
+   <Button id="Btn_Ready" fx:id="Btn_Ready" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="290.0" mnemonicParsing="false" onAction="#startGame" onMouseClicked="#startGame" onMouseEntered="#readyButtonHoverAnimation" onMouseExited="#readyButtonReleasedAnimation" prefHeight="30.0" prefWidth="120.0" styleClass="sample-button" text="READY" textAlignment="CENTER" textFill="WHITE">
       <font>
          <Font size="18.0" />
       </font>

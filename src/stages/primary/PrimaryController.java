@@ -1,20 +1,24 @@
 package stages.primary;
+import javafx.scene.Node;
+import javafx.scene.image.Image;
+import javafx.stage.StageStyle;
+import stages.Main;
 import javafx.animation.ScaleTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.io.IOException;
-
 import static javafx.application.Platform.exit;
 
+/**
+ * Primary controller class, used to manage players nicknames
+ */
 public class PrimaryController {
 
     // Attributes
@@ -23,6 +27,19 @@ public class PrimaryController {
     @FXML private TextField yellowTextField;
     public static String redNickname;
     public static String yellowNickname;
+
+    /**
+     * Method used to start the game and switching to the game stage
+     * Event activated on Btn_Ready click
+     */
+    @FXML public void startGame(ActionEvent event) throws IOException {
+        // Set nicknames on click
+        if (submitNicknames()) {
+            // Switch to game stage
+            switchToGameScene(event);
+            System.out.println("game started");
+        }
+    }
 
     /**
      * Method used to set player's nicknames
@@ -83,37 +100,30 @@ public class PrimaryController {
     }
 
     /**
-     * Method used to start the game and switching to the game stage
-     * Event activated on Btn_Ready click
-     */
-    @FXML public void startGame(ActionEvent event) throws IOException {
-        // Set nicknames on click
-        if (submitNicknames()) {
-            // Switch to game stage
-            switchToGameScene(event);
-            System.out.println("game started");
-        }
-    }
-
-    /**
      * Method used to switch to game scene
      * @param event when Btn_Ready is pressed
      * @throws IOException is game scene loading fails
      */
     @FXML public void switchToGameScene(ActionEvent event) throws IOException {
-        // Here we need to link the existing game stage, without creating a new one
-        Parent root = FXMLLoader.load(getClass().getResource("../game/game.fxml"));
-        Stage gameStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene gameScene = new Scene(root);
-        gameStage.setScene(gameScene);
+
+        /* ----------------- Game stage ----------------- */
+        Stage gameStage = new Stage();
+        Parent gameRoot = FXMLLoader.load(getClass().getResource("../game/game.fxml")); // Game scene FXML loader
+        gameStage.getIcons().add(new Image(Main.class.getResourceAsStream("../assets/images/connect-four-logo.png")));
+        gameStage.setTitle("Connect 4");
+        gameStage.initStyle(StageStyle.UNDECORATED);
+        gameStage.setResizable(false);
         gameStage.centerOnScreen();
-        gameStage.show();
+        gameStage.setScene(new Scene(gameRoot, 1440, 800));
+        ((Node)(event.getSource())).getScene().getWindow().hide(); // Close the primary stage
+        gameStage.show(); // Open the game stage
+
     }
 
     /**
      * Button hover animation
      */
-    @FXML public void buttonHoverAnimation() {
+    @FXML public void readyButtonHoverAnimation() {
         ScaleTransition scale = new ScaleTransition(Duration.millis(100), Btn_Ready);
         scale.setToX(1.1);
         scale.setToY(1.1);
@@ -123,7 +133,7 @@ public class PrimaryController {
     /**
      * Button exit animation
      */
-    @FXML public void buttonReleasedAnimation() {
+    @FXML public void readyButtonReleasedAnimation() {
         ScaleTransition scale = new ScaleTransition(Duration.millis(100), Btn_Ready);
         scale.setToX(1.0);
         scale.setToY(1.0);
