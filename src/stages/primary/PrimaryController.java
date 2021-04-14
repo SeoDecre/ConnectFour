@@ -147,4 +147,11 @@ public class PrimaryController {
         exit();
     }
 
+    // Getters
+    public static String getRedNickname() {
+        return redNickname;
+    }
+    public static String getYellowNickname() {
+        return yellowNickname;
+    }
 }

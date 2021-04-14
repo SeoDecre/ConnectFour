@@ -6,11 +6,18 @@
 .player-nickname {
 }
 
-.score-container{
+.score-container {
+    -fx-background-radius: 15;
+    -fx-background-color: #F1F3F6;
+    -fx-effect: dropshadow(one-pass-box, #eaeaea, 30, 0.5, 0, 5);
 }
 
 .score {
+    -fx-background-color: transparent;
 }
 
 .board-container {
+    -fx-background-color: #7285FF;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(one-pass-box, #eaeaea, 30, 0.5, 0, 5);
 }
